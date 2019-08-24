@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31-may-2017
+    Author     : Yacoobs
+*/
+
+form{ 
+    width: 600px;
+    margin: auto;
+    background: rgba(0,0,0,0.6);
+    color: brown;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+table{
+    margin: auto auto;
+    background: rgba(0,0,0,0.6);
+    
+}
+
+input{
+    text-align: center;
+    color: brown;
+    font-family: Franklin Gothic;
+    margin-top: 10px;
+    max-width: 200px;
+    
+    
+}
+
+h1,h2{
+    margin: 0;
+    text-align: center;
+    color: chocolate;
+    font-family: Hobo Std;
+    margin-bottom: 20px;
+    margin-top: 20px;
+ 
+}
+
+label{
+    color: darkorange;
+    font-family: Comic Sans MS;
+    margin-right: 20px;
+    font-size: 20px;
+
+}
+
+body{
+    background-image: url(imagen/Cuadrados.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    text-align: center;
+    
+}
+
+#Boton{
+    background: activecaption;
+    color: brown;
+    padding: 5px;
+    
+}
+#Boton:hover{
+    cursor: pointer;
+    
+}
