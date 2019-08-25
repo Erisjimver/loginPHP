@@ -8,8 +8,11 @@
 
 <?php 
 
-setcookie("prueba", "Esta es la informacion de mi primer kookie",time()-1,"/loginPHP/sesionesCookies/zona_contenidos/");
+//setcookie("prueba", "Esta es la informacion de mi primer kookie",time()-1,"/loginPHP/sesionesCookies/zona_contenidos/");
 
+	//setcookie("idioma_selecionado","es",time()-1);
+
+	setcookie("idioma_selecionado","es",time()-1);
 
 
  ?>
