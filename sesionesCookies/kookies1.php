@@ -12,7 +12,7 @@
 // un mes = 60 segundos (tiene un minuto) * 60 minutos (que tiene una hora)  * 24 horas (que tiene un dia) * 30 dias (que tiene un mes)    2592000 segundos (durara un mes)
 
 
-	setcookie("prueba", "Esta es la informacion de mi primer kookie",time()+30,"/loginPHP/sesionesCookies/zona_contenidos/");
+	setcookie("prueba", "Esta es la informacion de mi primer kookie",time()+300,"/loginPHP/sesionesCookies/zona_contenidos/");
 	 ?>
 
 </body>
