@@ -13,6 +13,7 @@
 	$contrasenia= $_POST['contra'];
 	
 	$pass_cifrado=password_hash($contrasenia, PASSWORD_DEFAULT);
+	//$pass_cifrado=password_hash($contrasenia, PASSWORD_DEFAULT,array("cost"=>12));
 	//echo $usuario;
 	//echo $contrasenia;
 	//echo "" . $pass_cifrado;
