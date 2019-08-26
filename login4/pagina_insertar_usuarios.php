@@ -9,26 +9,29 @@
 
 <?php
 
-	$usuario= $_POST["usu"];
-	$contrasenia= $_POST["contra"];
+	$usuario= $_POST['usu'];
+	$contrasenia= $_POST['contra'];
 	
-	
-				
+	$pass_cifrado=password_hash($contrasenia, PASSWORD_DEFAULT);
+	//echo $usuario;
+	//echo $contrasenia;
+	//echo "" . $pass_cifrado;
+
 	try{
 
-		$base=new PDO('mysql:host=localhost; dbname=pruebas', 'root', '');
+		$base=new PDO('mysql:host=localhost; dbname=usuarios', 'root', '');
 		
 		$base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		$base->exec("SET CHARACTER SET utf8");		
 		
 		
-		$sql="INSERT INTO USUARIOS (USUARIOS, PASSWORD) VALUES (:usu, :contra)";
+		$sql="insert into usuarios_pass(usuarios, password) values (:usu, :contra)";
 		
 		$resultado=$base->prepare($sql);		
 		
 		
-		$resultado->execute(array(":usu"=>$usuario, ":contra"=>$contrasenia));		
+		$resultado->execute(array(":usu"=>$usuario, ":contra"=>$pass_cifrado));		
 		
 		
 		echo "Registro insertado";
