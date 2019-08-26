@@ -11,7 +11,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        
+   
+        <?php 
+/*
+            if($autenticado==false){ 
+                if(!isset($_COOKIE["nombre_usuario"])){
+                include("formulario.php");
+            }
+        }
+*/
+
+
+
+
+        ?>     
          <h1>Introduce tus Datos Para Loguin</h1>
         <!--Esta seria la forma de hacer que al darle al boton loguin esta vuelva a recargar nuestra pagina
          de nuevo y esta linea de codigo se añade dentro del proceso action=" " -->
@@ -31,7 +44,8 @@
                     </td></tr>
             </table> 
         </form>
-        
+
+
         
         
     </body>

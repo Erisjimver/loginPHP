@@ -121,6 +121,12 @@ Miercoles 31 de Mayo de 2017.
             }
         }
 
+        if(isset($_COOKIE["nombre_usuario"])){
+            echo "!Hola " . $_COOKIE["nombre_usuario"] . "!";
+        }
+        else if($autenticado==true){
+            echo "!Hola " . $_POST["loguin"] . "!";
+        }
  
         ?>
         
@@ -130,14 +136,20 @@ Miercoles 31 de Mayo de 2017.
         <table style="width: 800px;border: 0;padding: 10px 20px;">
          
             <tr>
-                <td><img src="imagen/imagen1.jpg" width="300" height="160"</td>
-                <td><img src="imagen/imagen2.jpg" width="300" height="160"</td>      
+                <td><img src="imagen/imagen1.jpg" width="300" height="160"></td>
+                <td><img src="imagen/imagen2.jpg" width="300" height="160"></td>      
             </tr>
             <tr>
-                <td><img src="imagen/imagen3.jpg" width="300" height="160"</td>
-                <td><img src="imagen/imagen4.jpg" width="300" height="160"</td>   
+                <td><img src="imagen/imagen3.jpg" width="300" height="160"></td>
+                <td><img src="imagen/imagen4.jpg" width="300" height="160"></td>   
             </tr>
         </table> 
-       
+            <?php
+
+            if($autenticado==true || isset($_COOKIE["nombre_usuario"])){
+                include("./pagina.php");
+            }
+
+        ?>       
     </body>
 </html>
