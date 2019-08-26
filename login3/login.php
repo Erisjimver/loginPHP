@@ -13,7 +13,7 @@ Miercoles 31 de Mayo de 2017.
     <body>
         
         <?php
-        
+        $autenticado=false;
        if (isset($_POST["Boton"])){
            
       
@@ -60,10 +60,15 @@ Miercoles 31 de Mayo de 2017.
 
                         //session_start — Iniciar una nueva sesión o reanudar la existente.
                         //http://php.net/manual/es/function.session-start.php
-                        session_start();
 
-                        $_SESSION["usuario"]=$_POST["loguin"];
- 
+                        //session_start();
+
+                        //$_SESSION["usuario"]=$_POST["loguin"];
+                        $autenticado=true;
+                        if(isset($_POST["recordar"])){
+
+                            setcookie("nombre_usuario", $_POST["loguin"], time()+86400);
+                        }
 
                     }
                     else{
@@ -86,7 +91,7 @@ Miercoles 31 de Mayo de 2017.
 
         <?php
         
-        
+/*
         
         if (!isset($_SESSION["usuario"])){
             
@@ -106,6 +111,16 @@ Miercoles 31 de Mayo de 2017.
            
             
         }
+
+*/
+
+
+        if($autenticado==false){
+            if(!isset($_COOKIE["nombre_usuario"])){
+                include("formulario.php");
+            }
+        }
+
  
         ?>
         

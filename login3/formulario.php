@@ -24,6 +24,8 @@
                 <td><tr>
                 <label>Password:</label><input type="password" name="password"></td></tr>
                 <br>
+                <td><tr>
+                <label>Recordar:</label><input type="checkbox" name="recordar"></td></tr>
                 <td><tr><input  style="margin-left: 110px" type="submit" name="Boton" id="Boton" value="Loguin">
                     
                     </td></tr>
